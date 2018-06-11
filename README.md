@@ -4,7 +4,9 @@ graphql example with react and typescript using apollo
 
 the project is created starting from create-react-app with the [typescript template](https://github.com/Microsoft/TypeScript-React-Starter)
 
-the backend for this application is: [github.com/graphql-nodejs](https://github.com/alessandrodeste/graphql-nodejs)
+as backend for this application you can use: 
+- [github.com/graphql-nodejs](https://github.com/alessandrodeste/graphql-nodejs)
+- [github.com/graphql-nodejs-typescript](https://github.com/alessandrodeste/graphql-nodejs-typescript)
 
 ## Usage
 
