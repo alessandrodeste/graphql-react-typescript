@@ -12,6 +12,8 @@ the backend for this application is: [github.com/graphql-nodejs](https://github.
 
 > npm install
 
+> npm run generate-schema
+
 > npm start
 
 ```

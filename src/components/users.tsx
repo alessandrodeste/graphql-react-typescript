@@ -1,6 +1,6 @@
 import { ApolloClient, HttpLink, InMemoryCache } from 'apollo-boost';
-import gql from "graphql-tag";
 import * as React from "react";
+import {GetAuthors} from './queries';
 
 interface IState {
   authors: any[],
@@ -33,13 +33,7 @@ class Authors extends React.Component<any, IState> {
     });
   
     client.query({
-      query: gql`
-        {
-          authors {
-            name
-          }
-        }
-      `,
+      query: GetAuthors,
     })
     .then(data => this.setState({ authors: (data.data as any).authors })) // ???
     .catch(error => window.console.error(error));

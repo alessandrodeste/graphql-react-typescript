@@ -17,7 +17,9 @@
   },
   "scripts": {
     "start": "react-scripts-ts start",
-    "generate-schema": "ts-node generate-schema.ts",
+    "generate-schema": "npm run generate-schema-01 && npm run generate-schema-02",
+    "generate-schema-01": "apollo-codegen introspect-schema http://localhost:3001/graphql --output ./src/__generated__/schema.json",
+    "generate-schema-02": "apollo-codegen generate ./src/**/queries.ts --addTypename --schema ./src/__generated__/schema.json --target typescript --output ./src/__generated__/types.ts",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject"
